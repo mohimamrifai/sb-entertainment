@@ -346,6 +346,7 @@ img {
 /* contact */
 
 .contact {
+    width: 100%;
     background-color: #5F51FC;
     height: 60vh;
     margin-top: 7rem;
@@ -558,6 +559,10 @@ footer .alamat {
 @media screen and (max-width: 480px) {
     /* hp */
 
+    html {
+        font-size: 80%;
+    }
+
     .shape {
         display: none;
     }
@@ -580,6 +585,11 @@ footer .alamat {
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .about-content .right .right-img {
+        width: 80%;
+        height: 350px;
     }
 
     .hero .hero-text {
