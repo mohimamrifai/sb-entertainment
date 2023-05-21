@@ -44,11 +44,12 @@ img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
+    position: fixed;
     top: 0;
     background: rgba(255, 255, 255, 0.5);
     backdrop-filter: blur(10px);
-    z-index: 1000;
+    z-index: 100;
+    width: 100%;
 }
 
 .navbar .logo {
@@ -71,6 +72,8 @@ img {
 #menu {
     display: none;
 }
+
+
 
 #close {
     display: none;
@@ -180,9 +183,9 @@ img {
 }
 
 .about-content .left .left-img {
-    width: 500px;
-    border: 7px dashed #5F51FC;
-    padding: 1rem;
+    /* width: 500px; */
+    border: 7px solid #5F51FC;
+    padding: .5rem;
     overflow: hidden;
     border-radius: 5px;
     cursor: pointer;
@@ -358,6 +361,7 @@ img {
     text-align: left;
     width: 400px;
     background-color: white;
+    border-radius: 5px;
 }
 
 .contact .form input {
@@ -423,37 +427,31 @@ footer .alamat {
 
 
 @media screen and (max-width: 1200px) {
-    .about-content .left .left-img {
-        width: 300px;
-    }
+    /* laptop */
 
-    .about {
-        height: max-content;
-    }
-    .about-content .right .right-img {
-        width: 300px;
-    }
-
-    .layanan .cards .card {
-        width: 310px;
+    .navbar .links a {
+        font-size: .9rem;
+        margin: 0 1rem;
     }
 
     .hero {
-        padding: 1rem 0;
-        height: 60vh;
-        /* background: #f72121; */
+        height: 80vh;
         gap: 3rem;
     }
 
-    .hero .hero-img {
-        height: 300px;
-        overflow: hidden;
+    .hero .hero-text .hero-h2 {
+        font-size: 2.8rem;
+    }
+    .hero .hero-text .hero-p {
+        font-size: .9rem;
     }
 
-    .hero .hero-img img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .layanan {
+        padding: 3rem 1rem;
+    }
+
+    .layanan .cards .card {
+        width: 300px;
     }
 
     .portfolio {
@@ -461,132 +459,199 @@ footer .alamat {
     }
 
     .galeri div:nth-child(1) img:first-child {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
     
     .galeri div:nth-child(1) img:nth-child(2) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
     
     .galeri div:nth-child(2) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
     
     .galeri div:nth-child(3) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
+        border-top-left-radius: 30px;
+        border-bottom-right-radius: 30px;
     }
-
 }
 
 @media screen and (max-width: 768px) {
-
     /* tablet */
 
-    .hero .hero-text h2 {
-        font-size: 2.3rem;
+    .navbar .logo {
+        font-size: 1.5rem;
     }
 
-    .about {
-        height: 75vh;
+    .navbar .links a {
+        font-size: .9rem;
+        margin: 0 .5rem;
+    }
+
+    .hero {
+        padding: 3rem 0;
+        gap: 1rem;
+    }
+
+    .hero .hero-text .hero-h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero .hero-text .hero-p {
+        font-size: .8rem;
     }
 
     .hero .hero-img {
         height: 250px;
     }
 
-    .about-content .left .left-img {
-        width: 100%;
+    .about {
+        height: max-content;
     }
 
-    .layanan .cards .card {
-        width: 270px;
+    .about h2 {
+        padding-top: 5.5rem;
+    }
+
+    .about-content {
+        gap: 2rem;
+        padding: 0;
     }
 
     .about-content .left p {
         font-size: 2rem;
     }
-    .about-content .right .right-img {
-        width: 100%;
-        height: 450px;
-    }
-
-    .about .about-content {
-        padding: 0px 2rem;
-    }
-
-    .navbar .links a {
+    .about-content .right p {
         font-size: 1rem;
-        margin: 0 1rem;
     }
 
-    .hero {
-        gap: 1rem;
-    }
-
-    .galeri div:nth-child(1) img:first-child {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-    
-    .galeri div:nth-child(1) img:nth-child(2) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-    
-    .galeri div:nth-child(2) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-    
-    .galeri div:nth-child(3) {
-        border-top-left-radius: 50px;
-        border-bottom-right-radius: 50px;
-    }
-
-    .portfolio {
-        height: 75vh;
-    }
-
-    .galeri {
-        padding: 1rem;
-        gap: 1rem;
+    .portfolio .galeri {
+        padding: 2rem 0;
     }
 
     .contact {
-        flex-direction: column;
-        height: 75vh;
-    }
-
-    .contact .text p {
-        text-align: center;
+        padding: 4rem 1rem;
     }
 
     .contact .text {
-        width: 70%;
-        margin-bottom: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .contact .form {
+        padding: 1.5rem;
+        font-size: 1.3rem;
+        width: 350px;
+    }
+
+    footer {
+        padding: 3rem;
     }
 }
 
 @media screen and (max-width: 456px) {
     /* hp */
 
-    body {
-        overflow-x: hidden;
+    .shape {
+        display: none;
     }
 
-    .navbar .logo {
-        font-size: 1.3rem;
+    .shape2 {
+        display: none;
+    }
+
+    #menu {
+        display: block;
+        font-size: 2rem;
+    }
+
+    .navbar .links {
+        display: none;
     }
 
     .hero {
+        grid-template-columns: 1fr;
         height: max-content;
     }
 
-    .links {
+    .hero .hero-text {
+        margin-bottom: 50px;
+        padding-top: 3rem;
+    }
+
+    .about .about-content {
+        flex-direction: column;
+        justify-content: start;
+    }
+
+    .layanan .cards {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .layanan .cards .card {
+        width: 100%;
+    }
+
+    .portfolio {
+        height: max-content;
+    }
+
+    .portfolio .galeri {
+        margin-top: 2rem;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .galeri {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri div:nth-child(2) {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .galeri div:nth-child(3){
+        height: 250px;
+    }
+
+    .contact {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    #contact .text {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    footer {
+        flex-direction: column  ;
+    }
+
+    footer .alamat {
+        flex-direction: column;
+    }
+    .alamat .social-media {
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    .alamat .social-media a img {
+        margin-left: 0;
+    }
+
+    footer .alamat .footer-links {
+        margin-top: 20px;
+        gap: .5rem;
+    }
+
+
+    .navbar .links {
         position: absolute;
         width: 80%;
         display: flex;
@@ -601,8 +666,13 @@ footer .alamat {
         z-index: 100;
     }
 
+    .navbar .links.active {
+        right: 0;
+    }
+
     .navbar .links.active a {
         font-size: 1rem;
+        margin-bottom: 15px;
     }
 
     #close {
@@ -620,149 +690,6 @@ footer .alamat {
         display: block;
         font-size: 2rem;
     }
-
-
-    .navbar .links a {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-    }
-
-    .hero {
-        margin-top: 10rem;
-        grid-template-columns: 1fr;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .hero .hero-img {
-        margin-top: 7rem;
-    }
-
-    .hero .hero-text h2 {
-        font-size: 2.4rem;
-    }
-
-    .hero .hero-text .hero-p {
-        font-size: .8rem;
-        width: 100%;
-    }
-
-    .shape {
-        display: none;
-    }
-
-    .shape2 {
-        right: 0;
-    }
-
-    .about {
-        height: max-content;
-    }
-
-    .about .about-content {
-        flex-direction: column;
-        padding: 0;
-        align-items: center;
-    }
-
-    .layanan {
-        height: max-content;
-        padding: 1rem;
-    }
-    
-    .layanan .cards {
-        flex-direction: column;
-    }
-    
-    .layanan .cards .card {
-        width: 300px;
-        margin-bottom: 20px;
-    }
-    
-    .layanan .cards .card img {
-        height: 200px;
-    }
-
-    .portfolio {
-        height: max-content;
-    }
-
-    .galeri {
-        padding: 2rem;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .galeri div:nth-child(3) {
-        height:400px;
-        overflow: hidden;
-    }
-
-    .galeri div:nth-child(2) {
-        margin-top: 30px;
-        height: 350px;
-        overflow: hidden;
-    }
-
-    .contact {
-        height: max-content;
-        padding: 3rem 2rem;
-    }
-    .contact .text p {
-        text-align: center;
-        font-size: 1rem;
-    }
-
-    .contact .text {
-        width: 100%;
-    }
-
-    .contact .form {
-        width: 98%;
-        margin:  0 auto;
-    }
-
-    .contact .form label {
-        font-size: 1.1rem;
-    }
-
-    .contact .form .btn-wa {
-        font-size: 1.1rem;
-    }
-
-    footer {
-        padding: 3rem 3rem 1rem;
-        text-align: center;
-    }
-
-    footer {
-        flex-direction: column;
-    }
-
-    footer .alamat {
-        flex-direction: column;
-    }
-
-    footer .alamat p:first-child {
-        width: 80%;
-        margin-bottom: 30px;
-    }
-
-    .alamat .footer-links {
-        gap: .5rem;
-        margin-bottom: 30px;
-    }
-
-    .about-content .left p {
-        margin-top: 2rem;
-        margin-left: 0;
-        font-size: 1.7rem;
-        text-align: left;
-        width: 80%;
-    }
-
 
 }
 
