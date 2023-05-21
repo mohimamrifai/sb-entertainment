@@ -51,6 +51,11 @@ img {
     width: 100%;
 }
 
+.navbar .links {
+    display: flex;
+    align-items: center;
+}
+
 .navbar .logo {
     font-size: 2rem;
     font-weight: 700;
@@ -235,7 +240,7 @@ img {
 }
 
 .layanan .cards .card {
-    width: 350px;
+    width: 330px;
     overflow: hidden;
     border: 3px solid #5F51FC;
     border-top-left-radius: 50px;
@@ -550,7 +555,7 @@ footer .alamat {
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
     /* hp */
 
     .shape {
@@ -564,10 +569,6 @@ footer .alamat {
     #menu {
         display: flex;
         font-size: 2rem;
-    }
-
-    .navbar .links {
-        display: none;
     }
 
     .hero {
@@ -629,9 +630,13 @@ footer .alamat {
         height: max-content;
     }
 
-    #contact .text {
+    .contact .text {
         width: 100%;
         font-size: 1.3rem;
+    }
+
+    .contact .form {
+        width: 90%;
     }
 
     footer {
@@ -669,6 +674,7 @@ footer .alamat {
         padding: 2rem;
         transition: all 300ms ease;
         z-index: 100;
+        align-items: start;
     }
 
     .navbar .links.active {
@@ -685,10 +691,6 @@ footer .alamat {
         top: 1rem;
         right: 2rem;
         display: block;
-    }
-
-    .links.active {
-        right: 0;
     }
 
     #menu {
