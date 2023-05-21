@@ -93,7 +93,6 @@ img {
     padding: 3rem;
     align-items: center;
     position: relative;
-    width: 100%;
 }
 
 .hijau {
@@ -556,7 +555,7 @@ footer .alamat {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 480px) {
     /* hp */
 
     .shape {
@@ -665,12 +664,12 @@ footer .alamat {
     .navbar .links {
         position: absolute;
         width: 80%;
-        display: flex;
+        display: none;
         height: 100vh;
         background: #252525;
         color: white;
         top: 0;
-        right: -100%;
+        right: 0;
         flex-direction: column;
         padding: 2rem;
         transition: all 300ms ease;
@@ -679,7 +678,7 @@ footer .alamat {
     }
 
     .navbar .links.active {
-        right: 0;
+        display: flex;
     }
 
     .navbar .links.active a {
