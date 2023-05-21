@@ -563,6 +563,10 @@ footer .alamat {
         font-size: 80%;
     }
 
+    body {
+        overflow-x: hidden;
+    }
+
     .shape {
         display: none;
     }
