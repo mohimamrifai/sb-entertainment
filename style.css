@@ -664,8 +664,8 @@ footer .alamat {
 
     .navbar .links {
         position: absolute;
-        width: 80%;
-        display: none;
+        width: 0;
+        display: flex;
         height: 100vh;
         background: #252525;
         color: white;
@@ -680,6 +680,8 @@ footer .alamat {
 
     .navbar .links.active {
         right: 0;
+        width: 80%;
+        display: flex;
     }
 
     .navbar .links.active a {
