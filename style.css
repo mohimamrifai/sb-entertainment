@@ -424,9 +424,6 @@ footer .alamat {
 
 
 @media screen and (max-width: 1200px) {
-    html {
-        font-size: 80%;
-    }
     .about-content .left .left-img {
         width: 300px;
     }
@@ -503,7 +500,7 @@ footer .alamat {
     }
 
     .about-content .left .left-img {
-        width: 300px;
+        width: 100%;
     }
 
     .layanan .cards .card {
@@ -514,8 +511,8 @@ footer .alamat {
         font-size: 2rem;
     }
     .about-content .right .right-img {
-        width: 250px;
-        height: 400px;
+        width: 100%;
+        height: 450px;
     }
 
     .about .about-content {
@@ -582,6 +579,14 @@ footer .alamat {
         overflow-x: hidden;
     }
 
+    .navbar .logo {
+        font-size: 1.3rem;
+    }
+
+    .hero {
+        height: max-content;
+    }
+
     .links {
         position: absolute;
         width: 80%;
@@ -595,6 +600,10 @@ footer .alamat {
         padding: 2rem;
         transition: all 300ms ease;
         z-index: 100;
+    }
+
+    .navbar .links.active a {
+        font-size: 1rem;
     }
 
     #close {
@@ -633,7 +642,12 @@ footer .alamat {
     }
 
     .hero .hero-text h2 {
-        font-size: 2.8rem;
+        font-size: 2.4rem;
+    }
+
+    .hero .hero-text .hero-p {
+        font-size: .8rem;
+        width: 100%;
     }
 
     .shape {
@@ -645,15 +659,17 @@ footer .alamat {
     }
 
     .about {
-        margin-top: 300px;
+        height: max-content;
     }
 
-    .about-content {
+    .about .about-content {
         flex-direction: column;
+        padding: 0;
+        align-items: center;
     }
 
     .layanan {
-        margin-top: 700px;
+        height: max-content;
         padding: 1rem;
     }
     
@@ -697,7 +713,7 @@ footer .alamat {
     }
     .contact .text p {
         text-align: center;
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
     .contact .text {
@@ -705,8 +721,16 @@ footer .alamat {
     }
 
     .contact .form {
-        width: 95%;
+        width: 98%;
         margin:  0 auto;
+    }
+
+    .contact .form label {
+        font-size: 1.1rem;
+    }
+
+    .contact .form .btn-wa {
+        font-size: 1.1rem;
     }
 
     footer {
@@ -730,6 +754,14 @@ footer .alamat {
     .alamat .footer-links {
         gap: .5rem;
         margin-bottom: 30px;
+    }
+
+    .about-content .left p {
+        margin-top: 2rem;
+        margin-left: 0;
+        font-size: 1.7rem;
+        text-align: left;
+        width: 80%;
     }
 
 
